@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +15,7 @@
     "head head head"
     "nav content photos"
     "footer footer footer";
-  grid-template-columns: 200px 1fr 150px;
+  grid-template-columns: 200px 1fr 200px;
   grid-template-rows: 8vh 72vh 20vh;
 }
 
@@ -31,7 +29,7 @@ header {
 header h1 {
   color: red;
   padding-left: 50px;
-  font-size: 2.3rem;
+  font-size: 35px;
 }
 
 nav {
@@ -60,7 +58,7 @@ nav div a {
 .content h2 {
   padding: 0 20px;
   align-self: center;
-  font-size: 1.9rem;
+  font-size: 28px;
 }
 
 .content p {
@@ -77,10 +75,21 @@ nav div a {
   grid-area: photos;
 }
 
-.photos img {
-  opacity: 0.9;
-  width: 100%;
-  height: 100%;
+.photos div {
+  opacity: 0.87;
+  background-size: cover;
+}
+.img01 {
+  background: url(./images/img01.jpg);
+}
+.img02 {
+  background: url(./images/img02.jpg);
+}
+.img03 {
+  background: url(./images/img03.jpg);
+}
+.img04 {
+  background: url(./images/img04.jpg);
 }
 
 footer {
