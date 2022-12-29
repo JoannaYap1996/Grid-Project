@@ -161,7 +161,11 @@ h3 {
     grid-template-rows: auto;
     text-align: center;
   }
-
+  .content p,
+  .content h2 {
+    margin: auto;
+    text-align: center;
+  }
   footer {
     display: grid;
     justify-content: space-around;
@@ -187,11 +191,6 @@ h3 {
   }
   nav {
     display: none;
-  }
-  .content p,
-  .content h2 {
-    margin: auto;
-    text-align: center;
   }
 
   footer {
