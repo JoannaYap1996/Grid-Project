@@ -32,6 +32,11 @@ header h1 {
   font-size: 35px;
 }
 
+.navbar {
+  margin-right: 10px;
+  display: none;
+}
+
 nav {
   grid-area: nav;
   padding-left: 50px;
@@ -50,7 +55,7 @@ nav div a {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(./images/bg.jpg);
   background-size: cover;
-  background-position: left center;
+  background-position: center;
   grid-template-rows: repeat(3, 1fr);
   padding: 20px 80px;
 }
@@ -105,4 +110,102 @@ footer {
 
 h3 {
   border-bottom: 1px solid #fff;
+}
+
+/* media */
+
+@media only screen and (max-width: 1240px) {
+  .grid {
+    height: 100vh;
+    grid-template-areas:
+      "head head head"
+      "nav nav nav"
+      "content content content"
+      "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 4fr 1fr;
+  }
+  nav {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: auto;
+  }
+  footer {
+    grid-template-columns: repeat(3, 250px);
+  }
+  .photos {
+    display: none;
+  }
+  .content p {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  header {
+    justify-content: center;
+  }
+  header h1 {
+    padding: 0;
+  }
+  nav {
+    justify-content: center;
+    padding: 0;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: auto;
+    text-align: center;
+  }
+
+  footer {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 200px);
+  }
+  .testimonials {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .grid {
+    grid-template-areas:
+      "head "
+      "content "
+      "footer";
+    grid-template-columns: auto;
+    grid-template-rows: 80px 1fr auto;
+  }
+
+  .navbar {
+    display: inline-block;
+  }
+  nav {
+    display: none;
+  }
+  .content p,
+  .content h2 {
+    margin: auto;
+    text-align: center;
+  }
+  footer {
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    line-height: 3;
+  }
+  footer div {
+    padding: 15px;
+  }
+  .testimonials {
+    display: none;
+  }
+
+  .content {
+    grid-template-rows: 100px auto;
+    padding: 20px 20px;
+  }
 }
