@@ -32,6 +32,10 @@ header h1 {
   font-size: 35px;
 }
 
+.navicon {
+  margin-right: 10px;
+}
+
 .navbar {
   margin-right: 10px;
   display: none;
